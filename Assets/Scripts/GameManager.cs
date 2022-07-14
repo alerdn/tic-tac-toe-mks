@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float xOffset, yOffset;
     [SerializeField] private float startX, startY;
 
+    [Header("Audios")]
+    [SerializeField] private AudioSource winSound;
+    [SerializeField] private AudioSource tieSound;
+
     private State currentState;
 
     #region MonoBehavior Methods
@@ -97,7 +101,16 @@ public class GameManager : MonoBehaviour
     public void EndGame(Player winningPlayer = null)
     {
         currentState = State.EndGame;
-        OnGameEnded?.Invoke(winningPlayer ? $"{winningPlayer.Name} Player Wins!!!" : "It's a tie!");
+        if (winningPlayer)
+        {
+            OnGameEnded?.Invoke($"{winningPlayer.Name} Player Wins!!!");
+            winSound.Play();
+        }
+        else
+        {
+            OnGameEnded?.Invoke("It's a tie!");
+            tieSound.Play();
+        }
     }
 
     #endregion

@@ -8,8 +8,7 @@ public class GridUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text logText;
     [SerializeField] private Image tileSlotPrefab;
-
-    [SerializeField] Button restartBtn;
+    [SerializeField] private Button restartBtn;
 
     private void Start()
     {

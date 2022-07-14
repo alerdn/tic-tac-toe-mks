@@ -3,19 +3,21 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     private SpriteRenderer rederer;
+    private AudioSource sound;
 
     private void Start()
     {
         rederer = GetComponent<SpriteRenderer>();
+        sound = GetComponent<AudioSource>();
     }
 
     private void OnMouseDown()
     {
         if (GameManager.instance.CurrentState != State.Playing) return;
-
         if (rederer.sprite != null) return;
 
         rederer.sprite = GameManager.instance.CurrentPlayer.Sprite;
+        sound.Play();
 
         CheckLine(new Vector2[] { Vector2.right, Vector2.left });
         CheckLine(new Vector2[] { Vector2.up, Vector2.down });
