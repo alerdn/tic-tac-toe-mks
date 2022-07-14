@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8286f1c6a9299254e98fca64dd1da55c, type: 3}
+  m_Name: OPlayer
+  m_EditorClassIdentifier: 
+  _name: O
+  _sprite: {fileID: 21300000, guid: fc82b5d1be3262c44b7248ab1aa38b51, type: 3}
+  _primaryColor: {r: 0.17254902, g: 0.5411765, b: 0.9568628, a: 1}
