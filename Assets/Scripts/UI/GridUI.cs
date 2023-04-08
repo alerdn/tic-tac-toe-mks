@@ -34,7 +34,7 @@ public class GridUI : MonoBehaviour
         Player currentPlayer = GameManager.instance.CurrentPlayer;
         logText.text = $"{currentPlayer.Name} Player Turn";
         logText.color = currentPlayer.PrimaryColor;
-        logText.fontSize = 52f;
+        logText.fontSize = 135f;
     }
 
     private void RestartGame()
@@ -48,6 +48,6 @@ public class GridUI : MonoBehaviour
         restartBtn.gameObject.SetActive(true);
         logText.text = text;
         logText.color = new Color32(135, 114, 218, 255);
-        logText.fontSize = 64f;
+        logText.fontSize = 150f;
     }
 }
